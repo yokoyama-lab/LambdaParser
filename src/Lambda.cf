@@ -1,0 +1,20 @@
+Prog. Program ::= Exp ";" ;
+
+EId.   Exp ::= Ident ;
+EInt.  Exp ::= Integer ;
+EFun.  Exp ::= "(" "fn" Ident "=>" Exp ")" ;
+EApp.  Exp ::= "(" Exp Exp ")" ;
+EFix.  Exp ::= "(" "fix" Exp ")" ;
+EPls.  Exp ::= "(" Exp "+" Exp ")" ;
+EMin.  Exp ::= "(" Exp "-" Exp ")" ;
+EMul.  Exp ::= "(" Exp "*" Exp ")" ;
+EDiv.  Exp ::= "(" Exp "/" Exp ")" ;
+EEq.   Exp ::= "(" Exp "=" Exp ")" ;
+-- EPair. Exp ::= "(" "pair" Exp Exp ")" ;
+EPair. Exp ::= "(" Exp "," Exp ")" ;
+EFst.  Exp ::= "(" "fst" Exp ")" ;
+ESnd.  Exp ::= "(" "snd" Exp ")" ;
+EInl.  Exp ::= "(" "inl" Exp ")" ;
+EInr.  Exp ::= "(" "inr" Exp ")" ;
+ECase. Exp ::= "(" "case" Exp "of" "1""(" Ident ")" "=>" Exp "," "2" "(" Ident ")" "=>" Exp ")" ;
+ELet.  Exp ::= "let" Ident "=" Exp "in" Exp "end" ;
